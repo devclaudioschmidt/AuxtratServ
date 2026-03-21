@@ -1,0 +1,204 @@
+/* --- RESET GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Isso impede que o conteúdo "estoure" as bordas */
+}
+
+/* Ajuste na classe container para ser flexível */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%; /* Ocupa 100% da largura disponível */
+    overflow: hidden; /* Garante que nada saia para fora por acidente */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px; /* Reduzimos o espaço no telemóvel para sobrar área útil */
+    }
+}
+
+
+/* --- Variáveis de Identidade Visual --- */
+:root {
+    --azul-auxtrat: #007fb1;   /* Azul do ícone */
+    --verde-auxtrat: #6e8a4a;  /* Verde do texto/folha */
+    --cinza-escuro: #333333;   /* Texto principal */
+    --cinza-claro: #f8f9fa;    /* Fundos sutis */
+    --branco: #ffffff;
+    --transicao: all 0.3s ease;
+}
+
+/* --- CONFIGURAÇÕES GLOBAIS --- */
+
+/* Esta é a classe que faltava para dar o "respiro" lateral */
+.container {
+    max-width: 1200px;    /* Impede que o site estique demais em monitores grandes */
+    margin: 0 auto;       /* Centraliza o conteúdo no meio do ecrã */
+    padding: 0 40px;      /* Cria o espaço lateral de 40px (o "respiro") */
+    width: 100%;          /* Garante que ocupa a largura disponível até o limite do max-width */
+}
+
+/* Ajuste para telemóveis: menos espaço lateral para aproveitar o ecrã pequeno */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px; 
+    }
+}
+
+/* --- Configuração da Barra de Navegação --- */
+.navbar {
+    background-color: var(--branco);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    position: fixed; /* Mantém o menu sempre no topo */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo img {
+    height: 60px; /* Ajuste conforme o tamanho real da imagem */
+    display: block;
+    transition: var(--transicao);
+}
+
+/* --- Menu de Links (Desktop) --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    font-weight: 500;
+    font-size: 16px;
+    transition: var(--transicao);
+}
+
+.nav-links li a:hover {
+    color: var(--azul-auxtrat);
+}
+
+/* Botão de Contato Especial */
+.btn-contato {
+    background-color: var(--azul-auxtrat);
+    color: var(--branco) !important;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.btn-contato:hover {
+    background-color: var(--verde-auxtrat);
+    transform: translateY(-2px); /* Pequeno efeito de subir ao passar o rato */
+}
+
+/* --- Sistema de Dropdown (Serviços) --- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--branco);
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--verde-auxtrat);
+    list-style: none;
+    padding: 10px 0;
+}
+
+.dropdown-content li a {
+    padding: 12px 20px;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content li a:hover {
+    background-color: var(--cinza-claro);
+    color: var(--verde-auxtrat);
+}
+
+/* Mostrar dropdown no Desktop ao passar o rato */
+@media (min-width: 993px) {
+    /* O menu continua escondido por padrão */
+.dropdown-content {
+    display: none;
+    /* ... resto do código que já tinhas ... */
+    }
+
+/* Esta classe será adicionada pelo JavaScript ao clicar */
+.dropdown-content.show {
+    display: block;
+    }
+
+/* Rotação da seta quando aberto (opcional, fica muito profissional) */
+.dropbtn.active .seta {
+    transform: rotate(180deg);
+    display: inline-block;
+    }
+}
+
+/* --- MEDIA QUERY (RESPONSIVIDADE PARA TELEMÓVEL) --- */
+
+/* O botão ☰ fica escondido no computador */
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--azul-auxtrat);
+}
+
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block; /* Mostra o ícone no telemóvel */
+    }
+
+    .nav-links {
+        display: none; /* Esconde a lista horizontal */
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Altura da navbar */
+        left: 0;
+        width: 100%;
+        background-color: var(--branco);
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    /* Classe ativada pelo JavaScript ao clicar no ☰ */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Ajuste do Dropdown no Telemóvel */
+    .dropdown-content {
+        position: static; /* Empilha os serviços abaixo do nome 'Serviços' */
+        box-shadow: none;
+        background-color: var(--cinza-claro);
+        display: block; /* No mobile, deixamos os serviços visíveis ou clicáveis */
+        border-top: none;
+    }
+}
