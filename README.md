@@ -1,2 +1,2 @@
 # AuxtratServ
-Reposiório para Site AuxtratServ
+Repositório para Site AuxtratServ
