@@ -1,69 +1,113 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auxtrat SERV | Engenharia Hídrica</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+        content="Especialistas em manutenção técnica para tratamento de água e esgoto - Soluções completas e eficientes.">
+    <title>AuxTrat | Manutenção de Tratamento de Água</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Phosphor Icons (for modern icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
 
-    <div id="particles-js"></div>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
-    <div id="nav-placeholder" data-include="includes/navbar.html"></div>
-
-    <main>
-        <section class="hero-section">
-            <div class="hero-bg-blur"></div>
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <h1 class="neon-title">Engenharia Hídrica <br><span>do Futuro</span></h1>
-                    <h3>Tecnologia de Precisão em Tratamento de Água</h3>
-                    <p>Sistemas inteligentes e sustentáveis para a indústria 4.0. Eficiência máxima com impacto mínimo.</p>
-                    <div class="hero-btns">
-                        <a href="#contato" class="btn-neon">Iniciar Projeto</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="img/seu-equipamento.png" alt="" class="floating-tech">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Tecnologia & Sustentabilidade</span>
+                <h1 class="hero-title">Excelência em <span>Tratamento de Água e Esgoto</span></h1>
+                <p class="hero-subtitle">Soluções de engenharia e manutenção técnica especializada para otimizar os
+                    recursos hídricos da sua empresa com máxima eficiência e tecnologia de ponta.</p>
+                <div class="hero-actions">
+                    <a href="#servicos" class="btn btn-primary">Conheça Nossas Soluções <i
+                            class="ph ph-arrow-right"></i></a>
+                    <a href="#contato" class="btn btn-secondary">Solicitar Orçamento</a>
                 </div>
             </div>
-        </section>
-
-        <section class="services-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="tag">O que fazemos</span>
-                    <h2>Nossas Especialidades</h2>
-                    <div class="divider"></div>
-                </div>
-
-                <div class="services-grid">
-                    <div class="card">
-                        <div class="card-icon">⚙️</div>
-                        <h4>Retrofitting</h4>
-                        <p>Modernização de sistemas para máxima eficiência energética.</p>
+            <div class="hero-image">
+                <!-- Abstract Glass Card holding an icon -->
+                <div class="glass-card">
+                    <div class="glass-icon-wrapper">
+                        <i class="ph-fill ph-waves"></i>
                     </div>
-                    <div class="card">
-                        <div class="card-icon">💧</div>
-                        <h4>Tratamento</h4>
-                        <p>Soluções avançadas para água potável e reuso industrial.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">🔬</div>
-                        <h4>Análises</h4>
-                        <p>Monitoramento técnico e diagnóstico químico de precisão.</p>
+                    <div class="glass-stats">
+                        <div class="stat-item">
+                            <h3>+15 Anos</h3>
+                            <p>Experiência</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Suporte Técnico</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <div id="footer-placeholder" data-include="includes/footer.html"></div>
+    <!-- Services Section -->
+    <section class="services section" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos <span>Serviços Especiais</span></h2>
+                <p>Nossa equipe entrega soluções técnicas personalizadas e manutenção em todo o ciclo de purificação da
+                    água.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="ph-fill ph-drop"></i>
+                    </div>
+                    <h3>Estações de Água (ETA)</h3>
+                    <p>Manutenção, calibração e modernização em estações de tratamento de água de todos os portes.</p>
+                    <a href="#" class="card-link">Saiba Mais <i class="ph ph-arrow-right"></i></a>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="card-icon pipeline">
+                        <i class="ph-fill ph-pipes"></i>
+                    </div>
+                    <h3>Tratamento de Esgoto (ETE)</h3>
+                    <p>Adequação técnica, melhoria de efluentes e reparo de equipamentos eletromecânicos.</p>
+                    <a href="#" class="card-link">Saiba Mais <i class="ph ph-arrow-right"></i></a>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="card-icon gear">
+                        <i class="ph-fill ph-gear"></i>
+                    </div>
+                    <h3>Manutenção Preventiva</h3>
+                    <p>Programação contínua de manutenções para reduzir falhas e garantir funcionamento ininterrupto.
+                    </p>
+                    <a href="#" class="card-link">Saiba Mais <i class="ph ph-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Local JS -->
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
