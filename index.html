@@ -1,24 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auxtrat SERV | Assistência Técnica Especializada</title>
+    <title>Auxtrat SERV | Engenharia Hídrica</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <div data-include="includes/navbar.html"></div>
+    <div id="particles-js"></div>
+
+    <div id="nav-placeholder" data-include="includes/navbar.html"></div>
 
     <main>
-        <section class="hero">
-            <h1>Soluções em Tratamento de Água</h1>
-            <p>Assistência técnica profissional com foco em eficiência e sustentabilidade.</p>
+        <section class="hero-section">
+            <div class="hero-bg-blur"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="neon-title">Engenharia Hídrica <br><span>do Futuro</span></h1>
+                    <h3>Tecnologia de Precisão em Tratamento de Água</h3>
+                    <p>Sistemas inteligentes e sustentáveis para a indústria 4.0. Eficiência máxima com impacto mínimo.</p>
+                    <div class="hero-btns">
+                        <a href="#contato" class="btn-neon">Iniciar Projeto</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img/seu-equipamento.png" alt="" class="floating-tech">
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">O que fazemos</span>
+                    <h2>Nossas Especialidades</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="services-grid">
+                    <div class="card">
+                        <div class="card-icon">⚙️</div>
+                        <h4>Retrofitting</h4>
+                        <p>Modernização de sistemas para máxima eficiência energética.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">💧</div>
+                        <h4>Tratamento</h4>
+                        <p>Soluções avançadas para água potável e reuso industrial.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔬</div>
+                        <h4>Análises</h4>
+                        <p>Monitoramento técnico e diagnóstico químico de precisão.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <div data-include="includes/footer.html"></div>
+    <div id="footer-placeholder" data-include="includes/footer.html"></div>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
